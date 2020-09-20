@@ -1,0 +1,16 @@
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# CV
+CV.aux
+CV.bcf
+CV.out
+CV.run.xml
+fonts
+awesome-cv.cls
+
+# Other
+.idea/

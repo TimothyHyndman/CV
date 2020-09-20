@@ -1,0 +1,150 @@
+---
+name: Timothy
+surname: Hyndman
+position: Data Scientist
+address: Melbourne, Australia
+date: "`r format(Sys.time(), '%B %Y')`"
+# profilepic: 
+# www: timothyhyndman.com
+email: timothy.hyndman@gmail.com
+# twitter: mariecurie
+github: timothyhyndman
+# linkedin: mariecurie
+# aboutme: about me
+# headcolor:
+docname: curriculum vitae
+phone: +61 423065048
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+# Professional summary
+ * I am good
+
+# Education
+```{r}
+library(tibble)
+tribble(
+  ~ degree, ~ dates, ~ institution, ~ loc, ~ details,
+    "Ph.D.", "2015-2019", "University of Melbourne", "Melbourne, Australia", "Thesis titled `The coupling time for the Ising heat-bath dynamics & efficient optimization for statistical inference'.",
+  "Ph.D.", "2015-2019", "University of Melbourne", "Melbourne, Australia", "Completed under the supervision of Prof. Peter Taylor, Prof. Aurore Delaigle, and Assoc. Prof. Tim Garoni.",
+  # "B.Sc.(Hons)", "2011-2014", "Monash University", "Clayton, Australia", "Recipient of the Monash science merit scholarship (2011), multiple dean's list fellowship awards (2012, 2013, 2014), the Monash jubilee honours scholarship (2014), and the university medal for undergraduate academic excellence (2015).", 
+  "B.Sc.(Hons)", "2011-2014", "Monash University", "Clayton, Australia", "Honours research project proved that a Markov chain with close ties to the Ising model (the `worm chain') was rapidly mixing.", 
+  "B.Sc.(Hons)", "2011-2014", "Monash University", "Clayton, Australia", "GPA of 3.957, H1 honours result with an average mark of 93.", 
+  "A.Mus.A (Piano)", "2011", "Australian Music Examinations Board", "Melbourne, Australia", ""
+) %>% 
+  detailed_entries(degree, dates, institution, loc, details)
+```
+
+# Employment history
+```{r employment}
+tribble(
+  ~ role, ~ company, ~ loc, ~ dates, ~ details,
+  "Data scientist", "Biarri", "Windsor, Australia", "May. 2019 - Present", "Technical lead on a project with one of Australia's major fuel retailers to suggest real-time fuel prices at over 500 stores. Starting with over 100GB of raw transaction data, I developed predictive models, for short term fuel volume forecasts at candidate prices, as well as predictive models for in store purchases and long term effects of difference pricing strategies. I was one of two developers for the final software, and helped deploy the solution to the client's Azure infrastructure. The solution is currently in a trial phase and being used at approximately 80 stores Australia wide.",
+  "Data scientist", "Biarri", "Windsor, Australia", "May. 2019 - Present", "Developed tool to suggest `optimal' markdown prices for a group of sport and outdoor retailers. The challenge was to suggest a price that would allow them to get rid of stock within an allocated time while maximising profit. After two trial implementations, the net increase in margin was measured at approximately $200k or 20%.",
+  "Data scientist", "Biarri", "Windsor, Australia", "May. 2019 - Present", "Received feedback that we were `the best value client we have ever had' by a large government organisation for my analytics work on one of their processing pipelines.",
+  "Data scientist", "Biarri", "Windsor, Australia", "May. 2019 - Present", "I have also developed ranking algorithms for a competitor form of Poker, performed performance analysis on a 3rd party's electricity forecasting algorithms, and determined factors that correlated with poor sales growth for an outdoor activities retailer.",
+  # "Statistical Consultant", "Biarri", "Windsor, Australia", "Nov. 2018", "Two week intership as a statistical consultant for Biarri optimisation. I delivered analysis on a clien't sales data and identified factors that correlated with poor sales growth. The project involved cleaning and wrangling approximately 20GB of data; aggregating relevant data appropriately; using techniques such as seasonal trend decomposition, arima models, and regression models; and presenting these result in an intuitive graphical way.",
+  "Research assistant", "Monash University", "Clayton, Australia", "2019", "Worked with Tim Garoni on improving the results proved in my thesis. The outcome of this work, combined with the relevent parts from my thesis, is a working paper (detailed below).",
+  "Tutor", "University of Melbourne", "Melbourne, Australia", "2016 - 2018", "Tutored Linear Algebra (MAST10007)",
+  "Teaching Associate", "Monash University", "Clayton, Australia", "2013 - 2014", "Tutored analysis of change (MTH1020) and differential geometry (MTH3110). Mentioned in student evaluations as one of the best parts of the differential geometry unit.",
+  "AMSI Summer Research Scholarship", "Monash University", "Clayton, Australia", "2012-2013", "Supervised by Prof. Kate Smith-Miles and Dr Davaatseren Baatar. Worked on optimising an instrument scheduler for Leica Microsystems.",
+  # "Mathematics and English Tutoring", "Private", "Melbourne, Australia", "2009-2015", "Tutored students from years 7 to 12.",
+  # "Piano Accompanist", "Luther College", "Croydon, Australia", "2010-2013", "",
+  # "Piano Teaching", "Private", "Melbourne, Australia", "2009-2015", ""
+) %>% 
+  detailed_entries(role, dates, company, loc, details)
+```
+
+# Relevant Skills
+  * Proficient in Python, R, MATLAB, SQL, and TeX.
+  * Familiar with C++
+  * Experience using Docker, Docker Compose, AWS (S3 and Athena)
+
+# R packages
+TODO: Put links in
+```{r r-pkgs}
+tribble(
+  ~ pkg, ~ when, ~ role, ~ details,
+  "deconvolve", "2018", "Lead developer", "Provides tools for performing non-parametric deconvolution of measurement error problems",
+  "icon", "2017", "Author", "Embed SVG icons in R documents such as slides, reports and apps.",
+  "cricketdata", "2017", "Author", "International cricket data for men adn women, Tests, ODIs, and T20s.",
+) %>% 
+  brief_entries(glue::glue("\\textbf{<pkg>}: <role> \\newline <details>", .open = "<", .close = ">"), when, .protect = FALSE)
+```
+
+# Other awards
+<!-- # Awards & Achievements -->
+## Awards
+```{r}
+tribble(
+  ~ award, ~ from, ~ year,
+  "Winner of the annual `power of mathematics' award", "Biarri Optimisation", "2020",
+  "Science dean's list fellowship award", "Monash University", "2012-2014",
+  "Premier's VCE award for mathematics", "???", "2011",
+  "Australian Student Prize", "???", "2010",
+  "Australian Defence Force Long Tan Leadership and Teamwork award", "ADF", "2010"
+) %>%
+  brief_entries(award, year, from)
+```
+
+## Scholarships
+```{r}
+tribble(
+  ~ award, ~ from, ~ year,
+  "PhD scholarhips?", "???", "???",
+  "Monash jubilee honours scholarship", "Monash University", "2014",
+  "Science merit scholarship", "Monash University", "2011"
+) %>%
+  brief_entries(award, year, from)
+```
+
+## Competitions
+```{r}
+tribble(
+  ~ award, ~ from, ~ year,
+  "Winner `Advanced sampling & exploration competition'", "ACEMS", "2017",
+  "Special mention `Advanced sampling & exploration competition'", "ACEMS", "2016",
+  "Winner `Advanced sampling & exploration competition'", "ACEMS", "2015"
+) %>%
+  brief_entries(award, year, from)
+```
+
+# Publications
+<!-- ## PhD thesis -->
+
+## Research papers
+```{r papers}
+tribble(
+  ~ when, ~ authors, ~ title, ~ journal, ~ details,
+  "2016", "A Collevecchio, TM Garoni, T Hyndman, D Tokarev", "The worm process for the Ising model is rapidly mixing", "Journal of Statistical Physics 164, 1082-1102", "DETAILS",
+  "???", "A Delaigle, T Hyndman, T Wang", "deconvolve-package: Deconvolution tools for measurement error problems", "working paper intended for the Journal of Statistical Software", "DETAILS",
+  "???", "A Acollevecchio, TM Garoni, T Hyndman, E Zhou", "The coupling time for the Ising heat-bath dynamics", "working paper", "DETAILS"
+) %>% detailed_entries(
+  what = title,
+  when = when,
+  with = authors,
+  where = journal
+)
+```
+
+## Talks
+```{r talks}
+tribble(
+  ~ when, ~ event, ~ loc, ~ title, ~ details,
+  "2018", "ACEMS multisclae models workshop", "Monash University", "Using infromation percolation to find the coupling time for the 1D Ising.", "",
+  "2017", "Computational and Methodological Statics", "University of London", "How many point masses do we need for non-parametric deconvolution and maximum likelihood mixture densities?", "",
+  "2016", "ANZIAM Conference", "Australian National University", "How many probability masses do we need for maximum likelihood mixture densities?", "", 
+  "2016", "ACEMS Retreat", "Sydney", "3 minute talk + poster - `How many components do we need for location mixtures?'", ""
+) %>% detailed_entries(
+  what = event,
+  when = when,
+  with = title,
+  where = loc,
+  why = details
+)
+```
