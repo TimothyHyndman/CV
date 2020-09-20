@@ -11,7 +11,8 @@ email: timothy.hyndman@gmail.com
 github: timothyhyndman
 # linkedin: mariecurie
 # aboutme: about me
-# headcolor:
+# headcolor: 246078
+headcolor: 0e4961
 docname: curriculum vitae
 phone: +61 423065048
 output: vitae::awesomecv
@@ -47,7 +48,7 @@ tribble(
   detailed_entries(degree, dates, institution, loc)
 ```
 
-# Employment history
+# Employment History
 ```{r employment}
 tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
@@ -67,10 +68,16 @@ tribble(
   detailed_entries(role, dates, company, loc, details)
 ```
 
+\newpage
 # Relevant Skills
-  * Proficient in Python, R, MATLAB, SQL, and TeX.
-  * Familiar with C++
-  * Experience using Docker, Docker Compose, and AWS (S3 and Athena)
+```{r skills}
+tribble(
+  ~skilltype, ~skillslist,
+  "Programming", "Python, R, MATLAB, SQL, Bash",
+  "Tools", "Git, Docker, AWS (S3 and Athena), TeX"
+) %>% detailed_entries(what=skillslist, with=skilltype)
+```
+
 
 # Software
 ```{r r-pkgs}
@@ -78,7 +85,7 @@ tribble(
   ~ pkg, ~ when, ~ role, ~ details, ~url,
   "deconvolve", "2018", "Lead developer", "Provides tools for performing non-parametric deconvolution of measurement error problems","https://github.com/timothyhyndman/deconvolve",
   "icon", "2017", "Author", "Embed SVG icons in R documents such as slides, reports and apps.","https://github.com/ropenscilabs/icon",
-  "cricketdata", "2017", "Author", "International cricket data for men adn women, Tests, ODIs, and T20s.","https://github.com/ropenscilabs/cricketdata",
+  "cricketdata", "2017", "Author", "International cricket data for men and women, Tests, ODIs, and T20s.","https://github.com/ropenscilabs/cricketdata",
 ) %>% 
   brief_entries(glue::glue("\\textbf{\\href{<url>}{<pkg>}}: <role> \\newline <details>", .open = "<", .close = ">"), when, .protect = FALSE)
 ```
