@@ -54,7 +54,7 @@ tribble(
   "Data scientist", "Biarri", "Windsor, Australia", "May. 2019 - Present", "Technical lead on a project with one of Australia's major fuel retailers to suggest real-time fuel prices at over 500 stores. Starting with over 100GB of raw transaction data, I developed predictive models, for short term fuel volume forecasts at candidate prices, as well as predictive models for in store purchases and long term effects of difference pricing strategies. I was one of two developers for the final software, and helped deploy the solution to the client's Azure infrastructure. The solution is currently in a trial phase and being used at approximately 80 stores Australia wide.",
   "Data scientist", "Biarri", "Windsor, Australia", "May. 2019 - Present", "Developed tool to suggest `optimal' markdown prices for a group of sport and outdoor retailers. The challenge was to suggest a price that would allow them to get rid of stock within an allocated time while maximising profit. After two trial implementations, the net increase in margin was measured at approximately $200k or 20%.",
   "Data scientist", "Biarri", "Windsor, Australia", "May. 2019 - Present", "Received feedback that we were `the best value client we have ever had' by a large government organisation for my analytics work on one of their processing pipelines.",
-  "Data scientist", "Biarri", "Windsor, Australia", "May. 2019 - Present", "I have also developed ranking algorithms for a competitor form of Poker, performed performance analysis on a 3rd party's electricity forecasting algorithms, and determined factors that correlated with poor sales growth for an outdoor activities retailer.",
+  "Data scientist", "Biarri", "Windsor, Australia", "May. 2019 - Present", "I have also developed ranking algorithms for a competitor form of Poker, produced a performance analysis on a 3rd party's electricity forecasting algorithms, and determined factors that correlated with poor sales growth for an outdoor activities retailer.",
   # "Statistical Consultant", "Biarri", "Windsor, Australia", "Nov. 2018", "Two week intership as a statistical consultant for Biarri optimisation. I delivered analysis on a clien't sales data and identified factors that correlated with poor sales growth. The project involved cleaning and wrangling approximately 20GB of data; aggregating relevant data appropriately; using techniques such as seasonal trend decomposition, arima models, and regression models; and presenting these result in an intuitive graphical way.",
   "Research assistant", "Monash University", "Clayton, Australia", "2019", "Worked with Assoc. Prof. Tim Garoni on improving the results proved in my thesis. The outcome of this work, combined with the relevent parts from my thesis, is a working paper (detailed below).",
   "Tutor", "University of Melbourne", "Melbourne, Australia", "2016 - 2018", "Tutored Linear Algebra (MAST10007)",
@@ -70,18 +70,17 @@ tribble(
 # Relevant Skills
   * Proficient in Python, R, MATLAB, SQL, and TeX.
   * Familiar with C++
-  * Experience using Docker, Docker Compose, AWS (S3 and Athena)
+  * Experience using Docker, Docker Compose, and AWS (S3 and Athena)
 
 # Software
-TODO: Put links in
 ```{r r-pkgs}
 tribble(
-  ~ pkg, ~ when, ~ role, ~ details,
-  "deconvolve", "2018", "Lead developer", "Provides tools for performing non-parametric deconvolution of measurement error problems",
-  "icon", "2017", "Author", "Embed SVG icons in R documents such as slides, reports and apps.",
-  "cricketdata", "2017", "Author", "International cricket data for men adn women, Tests, ODIs, and T20s.",
+  ~ pkg, ~ when, ~ role, ~ details, ~url,
+  "deconvolve", "2018", "Lead developer", "Provides tools for performing non-parametric deconvolution of measurement error problems","https://github.com/timothyhyndman/deconvolve",
+  "icon", "2017", "Author", "Embed SVG icons in R documents such as slides, reports and apps.","https://github.com/ropenscilabs/icon",
+  "cricketdata", "2017", "Author", "International cricket data for men adn women, Tests, ODIs, and T20s.","https://github.com/ropenscilabs/cricketdata",
 ) %>% 
-  brief_entries(glue::glue("\\textbf{<pkg>}: <role> \\newline <details>", .open = "<", .close = ">"), when, .protect = FALSE)
+  brief_entries(glue::glue("\\textbf{\\href{<url>}{<pkg>}}: <role> \\newline <details>", .open = "<", .close = ">"), when, .protect = FALSE)
 ```
 
 <!-- # Other awards -->
@@ -127,17 +126,8 @@ tribble(
 
 ## Research papers
 ```{r papers}
-tribble(
-  ~ when, ~ authors, ~ title, ~ journal, ~ details,
-  "2016", "A Collevecchio, TM Garoni, T Hyndman, D Tokarev", "The worm process for the Ising model is rapidly mixing", "Journal of Statistical Physics 164, 1082-1102", "DETAILS",
-  "???", "A Delaigle, T Hyndman, T Wang", "deconvolve-package: Deconvolution tools for measurement error problems", "working paper intended for the Journal of Statistical Software", "DETAILS",
-  "???", "A Acollevecchio, TM Garoni, T Hyndman, E Zhou", "The coupling time for the Ising heat-bath dynamics", "working paper", "DETAILS"
-) %>% detailed_entries(
-  what = title,
-  when = when,
-  with = authors,
-  where = journal
-)
+bibliography_entries("tim.bib") %>%
+  arrange(year)
 ```
 
 <!-- ## Talks -->
