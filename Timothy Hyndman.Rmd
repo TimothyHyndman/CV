@@ -4,7 +4,7 @@ surname: Hyndman
 position: Data Scientist
 address: Melbourne, Australia
 date: "`r format(Sys.time(), '%B %Y')`"
-# profilepic: 
+profilepic: drtim.jpg
 # www: timothyhyndman.com
 email: timothy.hyndman@gmail.com
 # twitter: mariecurie
@@ -22,8 +22,8 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 ```
 
-# Professional summary
- * I am good
+<!-- # Professional summary -->
+<!--  * I am good -->
 
 # Education
 ```{r}
@@ -49,7 +49,7 @@ tribble(
   "Data scientist", "Biarri", "Windsor, Australia", "May. 2019 - Present", "Received feedback that we were `the best value client we have ever had' by a large government organisation for my analytics work on one of their processing pipelines.",
   "Data scientist", "Biarri", "Windsor, Australia", "May. 2019 - Present", "I have also developed ranking algorithms for a competitor form of Poker, performed performance analysis on a 3rd party's electricity forecasting algorithms, and determined factors that correlated with poor sales growth for an outdoor activities retailer.",
   # "Statistical Consultant", "Biarri", "Windsor, Australia", "Nov. 2018", "Two week intership as a statistical consultant for Biarri optimisation. I delivered analysis on a clien't sales data and identified factors that correlated with poor sales growth. The project involved cleaning and wrangling approximately 20GB of data; aggregating relevant data appropriately; using techniques such as seasonal trend decomposition, arima models, and regression models; and presenting these result in an intuitive graphical way.",
-  "Research assistant", "Monash University", "Clayton, Australia", "2019", "Worked with Tim Garoni on improving the results proved in my thesis. The outcome of this work, combined with the relevent parts from my thesis, is a working paper (detailed below).",
+  "Research assistant", "Monash University", "Clayton, Australia", "2019", "Worked with Assoc. Prof. Tim Garoni on improving the results proved in my thesis. The outcome of this work, combined with the relevent parts from my thesis, is a working paper (detailed below).",
   "Tutor", "University of Melbourne", "Melbourne, Australia", "2016 - 2018", "Tutored Linear Algebra (MAST10007)",
   "Teaching Associate", "Monash University", "Clayton, Australia", "2013 - 2014", "Tutored analysis of change (MTH1020) and differential geometry (MTH3110). Mentioned in student evaluations as one of the best parts of the differential geometry unit.",
   "AMSI Summer Research Scholarship", "Monash University", "Clayton, Australia", "2012-2013", "Supervised by Prof. Kate Smith-Miles and Dr Davaatseren Baatar. Worked on optimising an instrument scheduler for Leica Microsystems.",
@@ -65,7 +65,7 @@ tribble(
   * Familiar with C++
   * Experience using Docker, Docker Compose, AWS (S3 and Athena)
 
-# R packages
+# Software
 TODO: Put links in
 ```{r r-pkgs}
 tribble(
@@ -85,8 +85,8 @@ tribble(
   ~ award, ~ from, ~ year,
   "Winner of the annual `power of mathematics' award", "Biarri Optimisation", "2020",
   "Science dean's list fellowship award", "Monash University", "2012-2014",
-  "Premier's VCE award for mathematics", "???", "2011",
-  "Australian Student Prize", "???", "2010",
+  "Premier's VCE award for mathematics", "VCAA", "2011",
+  "Australian Student Prize", "VCAA", "2010",
   "Australian Defence Force Long Tan Leadership and Teamwork award", "ADF", "2010"
 ) %>%
   brief_entries(award, year, from)
@@ -96,7 +96,8 @@ tribble(
 ```{r}
 tribble(
   ~ award, ~ from, ~ year,
-  "PhD scholarhips?", "???", "???",
+  "ACEMS top-up scholarship", "ACEMS", "2015",
+  "Australian Postgraduate Award", "Australian Government", "2015",
   "Monash jubilee honours scholarship", "Monash University", "2014",
   "Science merit scholarship", "Monash University", "2011"
 ) %>%
