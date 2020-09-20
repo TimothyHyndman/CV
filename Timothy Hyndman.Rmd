@@ -4,7 +4,7 @@ surname: Hyndman
 position: Data Scientist
 address: Melbourne, Australia
 date: "`r format(Sys.time(), '%B %Y')`"
-profilepic: drtim.jpg
+profilepic: naturetimcrop.jpg
 # www: timothyhyndman.com
 email: timothy.hyndman@gmail.com
 # twitter: mariecurie
