@@ -20,6 +20,7 @@ output: vitae::awesomecv
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
+library(tibble)
 ```
 
 <!-- # Professional summary -->
@@ -27,17 +28,23 @@ library(vitae)
 
 # Education
 ```{r}
-library(tibble)
 tribble(
   ~ degree, ~ dates, ~ institution, ~ loc, ~ details,
     "Ph.D.", "2015-2019", "University of Melbourne", "Melbourne, Australia", "Thesis titled `The coupling time for the Ising heat-bath dynamics & efficient optimization for statistical inference'.",
   "Ph.D.", "2015-2019", "University of Melbourne", "Melbourne, Australia", "Completed under the supervision of Prof. Peter Taylor, Prof. Aurore Delaigle, and Assoc. Prof. Tim Garoni.",
   # "B.Sc.(Hons)", "2011-2014", "Monash University", "Clayton, Australia", "Recipient of the Monash science merit scholarship (2011), multiple dean's list fellowship awards (2012, 2013, 2014), the Monash jubilee honours scholarship (2014), and the university medal for undergraduate academic excellence (2015).", 
   "B.Sc.(Hons)", "2011-2014", "Monash University", "Clayton, Australia", "Honours research project proved that a Markov chain with close ties to the Ising model (the `worm chain') was rapidly mixing.", 
-  "B.Sc.(Hons)", "2011-2014", "Monash University", "Clayton, Australia", "GPA of 3.957, H1 honours result with an average mark of 93.", 
-  "A.Mus.A (Piano)", "2011", "Australian Music Examinations Board", "Melbourne, Australia", ""
+  "B.Sc.(Hons)", "2011-2014", "Monash University", "Clayton, Australia", "GPA of 3.957, H1 honours result with an average mark of 93."
 ) %>% 
   detailed_entries(degree, dates, institution, loc, details)
+```
+
+```{r}
+tribble(
+  ~ degree, ~ dates, ~ institution, ~ loc,
+"A.Mus.A (Piano)", "2011", "Australian Music Examinations Board", "Melbourne, Australia"
+) %>%
+  detailed_entries(degree, dates, institution, loc)
 ```
 
 # Employment history
@@ -77,8 +84,8 @@ tribble(
   brief_entries(glue::glue("\\textbf{<pkg>}: <role> \\newline <details>", .open = "<", .close = ">"), when, .protect = FALSE)
 ```
 
-# Other awards
-<!-- # Awards & Achievements -->
+<!-- # Other awards -->
+# Awards & Achievements
 ## Awards
 ```{r}
 tribble(
@@ -133,19 +140,19 @@ tribble(
 )
 ```
 
-## Talks
-```{r talks}
-tribble(
-  ~ when, ~ event, ~ loc, ~ title, ~ details,
-  "2018", "ACEMS multisclae models workshop", "Monash University", "Using infromation percolation to find the coupling time for the 1D Ising.", "",
-  "2017", "Computational and Methodological Statics", "University of London", "How many point masses do we need for non-parametric deconvolution and maximum likelihood mixture densities?", "",
-  "2016", "ANZIAM Conference", "Australian National University", "How many probability masses do we need for maximum likelihood mixture densities?", "", 
-  "2016", "ACEMS Retreat", "Sydney", "3 minute talk + poster - `How many components do we need for location mixtures?'", ""
-) %>% detailed_entries(
-  what = event,
-  when = when,
-  with = title,
-  where = loc,
-  why = details
-)
-```
+<!-- ## Talks -->
+<!-- ```{r talks} -->
+<!-- tribble( -->
+<!--   ~ when, ~ event, ~ loc, ~ title, ~ details, -->
+<!--   "2018", "ACEMS multiscale models workshop", "Monash University", "Using information percolation to find the coupling time for the 1D Ising.", "", -->
+<!--   "2017", "Computational and Methodological Statics", "University of London", "How many point masses do we need for non-parametric deconvolution and maximum likelihood mixture densities?", "", -->
+<!--   "2016", "ANZIAM Conference", "Australian National University", "How many probability masses do we need for maximum likelihood mixture densities?", "",  -->
+<!--   "2016", "ACEMS Retreat", "Sydney", "3 minute talk + poster - `How many components do we need for location mixtures?'", "" -->
+<!-- ) %>% detailed_entries( -->
+<!--   what = event, -->
+<!--   when = when, -->
+<!--   with = title, -->
+<!--   where = loc, -->
+<!--   why = details -->
+<!-- ) -->
+<!-- ``` -->
