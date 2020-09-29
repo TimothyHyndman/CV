@@ -5,7 +5,7 @@ position: Data Scientist
 address: Melbourne, Australia
 date: "`r format(Sys.time(), '%B %Y')`"
 profilepic: naturetimcrop.jpg
-# www: timothyhyndman.com
+www: timothyhyndman.com
 email: timothy.hyndman@gmail.com
 # twitter: mariecurie
 github: timothyhyndman
