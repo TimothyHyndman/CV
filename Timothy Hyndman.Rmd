@@ -86,6 +86,7 @@ tribble(
   "deconvolve", "2018", "Lead developer", "Provides tools for performing non-parametric deconvolution of measurement error problems","https://github.com/timothyhyndman/deconvolve",
   "icon", "2017", "Author", "Embed SVG icons in R documents such as slides, reports and apps.","https://github.com/ropenscilabs/icon",
   "cricketdata", "2017", "Author", "International cricket data for men and women, Tests, ODIs, and T20s.","https://github.com/ropenscilabs/cricketdata",
+  "fable", "2020", "Contributor", "Tidy time series forecasting", "https://github.com/tidyverts/fable"
 ) %>%
   brief_entries(glue::glue("\\textbf{\\href{<url>}{<pkg>}}: <role> \\newline <details>", .open = "<", .close = ">"), when, .protect = FALSE)
 ```
