@@ -11,6 +11,8 @@ CV.out
 CV.run.xml
 fonts
 *.log
+*.aux
+*.out
 
 # Other
 .idea/
