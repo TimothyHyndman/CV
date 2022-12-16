@@ -11,11 +11,12 @@ email: timothy.hyndman@gmail.com
 github: timothyhyndman
 # linkedin: mariecurie
 # aboutme: about me
-# headcolor: 246078
-#headcolor: "0e4961"
 docname: curriculum vitae
 # phone: +61 423065048
 output: vitae::awesomecv
+header-includes:
+  - \definecolor{awesome}{HTML}{246078}
+  - \renewcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\textcolor{awesome}{#1}}}
 ---
 
 ```{r setup, include=FALSE}
